@@ -3,94 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080d20">
-  <meta name="description" content="Khám phá vũ trụ, các hành tinh và những điều kỳ diệu của thiên văn học.">
-  <title>UNIVERSA — Khám phá vũ trụ</title>
+  <meta name="theme-color" content="#1769c2">
+  <meta name="description" content="Góc nhỏ giới thiệu về Đỗ Ngọc Minh Ngân — xanh dương, trắng và những chú mèo.">
+  <title>Minh Ngân — Một góc nhỏ của tớ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="shooting-stars" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="starfield" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Universa trang chủ"><span class="brand-mark">✳</span> UNIVERSA<span class="brand-dot">.</span></a>
-    <nav aria-label="Điều hướng chính">
-      <a href="#explore">Hành tinh</a><a href="#cosmos">Vũ trụ</a><a href="#explorers">Khám phá</a>
+    <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-icon">m.</span><span>ngân<span class="brand-dot">/</span>nghịch</span></a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#about">Về tớ</a><a href="#favorites">Tớ thích</a><a href="#little-world">Góc nhỏ</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện" title="Đổi giao diện">☼</button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Đổi giao diện" title="Đổi giao diện">☼</button>
   </header>
 
   <main>
     <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> MỘT CHUYẾN DU HÀNH BẮT ĐẦU TỪ ĐÂY</div>
-        <h1>Chạm vào<br><span class="gradient-text">vô tận.</span></h1>
-        <p class="hero-desc">Vũ trụ rộng lớn hơn những gì chúng ta có thể tưởng tượng. Cùng khám phá các hành tinh, những ngôi sao và bí ẩn ngoài không gian.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#explore">Bắt đầu khám phá <span>↗</span></a><a class="text-link" href="#cosmos">Vũ trụ là gì? <span>↓</span></a></div>
-        <div class="hero-note"><span class="mini-stars">✦ ✧ ✦</span><span>Mỗi ánh sáng là một câu chuyện.</span></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> PERSONAL PAGE · EST. 2011</p>
+        <h1>Xin chào,<br>tớ là <span class="blue-text">Minh Ngân</span><span class="cursor">_</span></h1>
+        <p class="hero-description">Một chiếc website nho nhỏ để giới thiệu về tớ. Có màu xanh, vài điều thú vị và một hội mèo đang làm chủ nơi này.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#about">Làm quen với tớ <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="#little-world">Khám phá góc nhỏ</a>
+        </div>
+        <div class="hero-meta"><span><i class="meta-icon">✳</i> sống theo cách của mình</span><span><i class="meta-icon">⌁</i> team mèo</span></div>
       </div>
-      <div class="solar-art interactive-solar" aria-label="Mô hình hệ Mặt Trời tương tác">
-        <div class="solar-halo"></div><div class="sun interactive-sun" tabindex="0" role="button" aria-label="Tìm hiểu về Mặt Trời" data-space-object="sun"><span></span></div>
-        <div class="orbit-track orbit-mercury" style="--orbit-size:92px;--orbit-time:7s"><button class="orbit-planet mercury" data-space-object="mercury" aria-label="Sao Thủy"></button></div>
-        <div class="orbit-track orbit-venus" style="--orbit-size:135px;--orbit-time:11s"><button class="orbit-planet venus" data-space-object="venus" aria-label="Sao Kim"></button></div>
-        <div class="orbit-track orbit-earth" style="--orbit-size:178px;--orbit-time:15s"><button class="orbit-planet earth" data-space-object="earth" aria-label="Trái Đất"><span class="moon"></span></button></div>
-        <div class="orbit-track orbit-mars" style="--orbit-size:222px;--orbit-time:20s"><button class="orbit-planet mars" data-space-object="mars" aria-label="Sao Hỏa"></button></div>
-        <div class="orbit-track orbit-jupiter" style="--orbit-size:270px;--orbit-time:29s"><button class="orbit-planet jupiter" data-space-object="jupiter" aria-label="Sao Mộc"></button></div>
-        <div class="orbit-track orbit-saturn" style="--orbit-size:318px;--orbit-time:37s"><button class="orbit-planet saturn" data-space-object="saturn" aria-label="Sao Thổ"></button></div>
-        <div class="orbit-track orbit-uranus" style="--orbit-size:365px;--orbit-time:46s"><button class="orbit-planet uranus" data-space-object="uranus" aria-label="Sao Thiên Vương"></button></div>
-        <div class="orbit-track orbit-neptune" style="--orbit-size:412px;--orbit-time:56s"><button class="orbit-planet neptune" data-space-object="neptune" aria-label="Sao Hải Vương"></button></div>
-        <span class="art-star star-a">✦</span><span class="art-star star-b">✧</span><span class="art-star star-c">✦</span><span class="art-star star-d">✧</span>
-        <div class="orbit-hint"><span class="hint-pulse"></span> CHỌN MỘT HÀNH TINH</div><div class="art-label"><span class="label-line"></span><span>OUR SOLAR SYSTEM</span></div>
+      <div class="hero-art reveal" aria-label="Minh họa một chú mèo màu xanh">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+        <span class="float-tag tag-top">meow.exe</span><span class="float-tag tag-side">mood: chill</span>
+        <div class="cat-stage">
+          <svg class="main-cat" viewBox="0 0 340 340" role="img" aria-label="Chú mèo xanh đang ngồi">
+            <defs><linearGradient id="catBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dc7ff"/><stop offset="1" stop-color="#2768cb"/></linearGradient></defs>
+            <ellipse cx="172" cy="294" rx="95" ry="14" fill="#164d91" opacity=".12"/>
+            <path d="M102 165 C72 140 70 99 83 62 C108 74 126 91 140 111" fill="url(#catBlue)" stroke="#1f5fb9" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M205 111 C221 89 243 73 268 62 C281 100 278 139 247 166" fill="url(#catBlue)" stroke="#1f5fb9" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M94 156 C93 125 111 105 137 96 C158 88 190 88 211 97 C238 108 251 132 249 164 L240 224 C236 260 211 278 171 278 C131 278 105 259 101 224 Z" fill="url(#catBlue)" stroke="#1f5fb9" stroke-width="4"/>
+            <path d="M120 122 L112 83 L143 107 Z M220 107 L250 83 L242 124 Z" fill="#e8f5ff"/>
+            <ellipse cx="145" cy="164" rx="7" ry="11" fill="#102f61"/><ellipse cx="201" cy="164" rx="7" ry="11" fill="#102f61"/>
+            <path d="M164 180 Q173 188 182 180 Q173 198 164 180" fill="#f3f9ff" stroke="#1f5fb9" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M170 193 Q161 205 151 197 M176 193 Q185 205 195 197" fill="none" stroke="#164d91" stroke-width="3" stroke-linecap="round"/>
+            <path d="M150 187 L119 183 M151 195 L119 199 M194 187 L225 183 M193 195 L225 199" stroke="#eaf6ff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M112 236 Q91 253 111 269 Q128 280 146 265" fill="none" stroke="#2768cb" stroke-width="17" stroke-linecap="round"/>
+            <path d="M197 263 Q215 278 233 265 Q249 253 233 235" fill="none" stroke="#2768cb" stroke-width="17" stroke-linecap="round"/>
+            <path d="M147 115 Q170 129 193 115" fill="none" stroke="#b9e3ff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="103" cy="211" r="5" fill="#c7e9ff"/><circle cx="235" cy="211" r="5" fill="#c7e9ff"/>
+          </svg>
+          <span class="spark spark-one">✦</span><span class="spark spark-two">✳</span><span class="spark spark-three">✧</span>
+        </div>
+        <div class="art-caption"><span class="caption-line"></span><span>đại diện hội mèo</span><span class="caption-line"></span></div>
       </div>
-      <div class="scroll-cue"><span></span> CUỘN ĐỂ KHÁM PHÁ</div>
+      <a class="scroll-cue" href="#about"><span class="scroll-mouse"></span> CUỘN XUỐNG MỘT CHÚT</a>
     </section>
 
-    <section class="section-wrap explore-section" id="explore">
-      <div class="section-heading"><div><div class="eyebrow">01 / HỆ MẶT TRỜI</div><h2>Những thế giới <span class="gradient-text">khác biệt.</span></h2></div><p>Tám hành tinh, tám cá tính riêng. Chọn một hành tinh để tìm hiểu thêm.</p></div>
-      <div class="planet-grid">
-        <button class="planet-card" data-planet="mercury"><span class="planet-visual mercury"></span><span class="planet-number">01</span><strong>Sao Thủy</strong><small>MERCURY</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="venus"><span class="planet-visual venus"></span><span class="planet-number">02</span><strong>Sao Kim</strong><small>VENUS</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="earth"><span class="planet-visual earth"></span><span class="planet-number">03</span><strong>Trái Đất</strong><small>EARTH</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="mars"><span class="planet-visual mars"></span><span class="planet-number">04</span><strong>Sao Hỏa</strong><small>MARS</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="jupiter"><span class="planet-visual jupiter"></span><span class="planet-number">05</span><strong>Sao Mộc</strong><small>JUPITER</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="saturn"><span class="planet-visual saturn"></span><span class="planet-number">06</span><strong>Sao Thổ</strong><small>SATURN</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="uranus"><span class="planet-visual uranus"></span><span class="planet-number">07</span><strong>Sao Thiên Vương</strong><small>URANUS</small><span class="card-arrow">↗</span></button>
-        <button class="planet-card" data-planet="neptune"><span class="planet-visual neptune"></span><span class="planet-number">08</span><strong>Sao Hải Vương</strong><small>NEPTUNE</small><span class="card-arrow">↗</span></button>
+    <section class="section-wrap about-section" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 / ABOUT ME</p><h2>Một chút thông tin<br><span class="blue-text">về tớ.</span></h2><p>Không cần giới thiệu quá cầu kỳ — đây là những thông tin cơ bản về chủ nhân của website.</p></div>
+      <div class="profile-grid">
+        <article class="profile-card name-card reveal"><div class="card-topline"><span>PROFILE_001</span><span class="card-symbol">↗</span></div><div class="mini-avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 42 L21 12 L43 31 Q50 28 57 31 L79 12 L82 43 Q91 66 75 80 Q50 99 25 80 Q9 66 18 42Z" fill="#6bb8f4"/><ellipse cx="37" cy="53" rx="3.5" ry="5" fill="#123e7b"/><ellipse cx="63" cy="53" rx="3.5" ry="5" fill="#123e7b"/><path d="M45 63 Q50 69 55 63 Q50 75 45 63" fill="#fff"/></svg></div><p class="field-label">HỌ VÀ TÊN</p><h3>Đỗ Ngọc<br>Minh Ngân</h3><p class="card-note">Rất vui vì bạn đã ghé qua!</p><span class="index-number">01</span></article>
+        <article class="profile-card birthday-card reveal"><div class="card-topline"><span>PROFILE_002</span><span class="card-symbol">✳</span></div><div class="birthday-icon" aria-hidden="true">22<span>/</span>09</div><p class="field-label">NGÀY SINH</p><h3>22 tháng 9, 2011</h3><p class="card-note">Một ngày tháng chín.</p><div class="calendar-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="index-number">02</span></article>
+        <article class="profile-card vibe-card reveal"><div class="card-topline"><span>PROFILE_003</span><span class="card-symbol">⌁</span></div><div class="vibe-icon" aria-hidden="true"><span>☁</span><span>✦</span><span>🐾</span></div><p class="field-label">VIBE HIỆN TẠI</p><h3>Blue mood.<br>Cat person.</h3><p class="card-note">Xanh dương, trắng và những chiếc chân mèo.</p><span class="index-number">03</span></article>
       </div>
-      <div class="planet-detail" id="planetDetail" aria-live="polite"><span class="detail-icon">✦</span><p>Chọn một hành tinh ở phía trên để mở hồ sơ khám phá.</p></div>
     </section>
 
-    <section class="explorer-section" id="explorers"><div class="section-wrap">
-      <div class="section-heading"><div><div class="eyebrow">03 / HUMANITY & SPACE</div><h2>Con người đã <span class="gradient-text">đặt chân đến đâu?</span></h2></div><p>Con người chưa từng đặt chân lên hành tinh nào ngoài Trái Đất — nhưng robot đã đi rất xa.</p></div>
-      <div class="explorer-banner"><div class="moon-art"><div class="moon-orb"></div><span class="moon-flag">⚑</span><span class="moon-footprint">✦</span></div><div class="explorer-banner-copy"><span class="fact-tag">20 JULY 1969 · APOLLO 11</span><h3>Neil Armstrong</h3><p>Người đầu tiên đi bộ trên một thiên thể khác là phi hành gia Neil Armstrong — trên <strong>Mặt Trăng</strong>, không phải một hành tinh. Buzz Aldrin cũng bước trên Mặt Trăng trong sứ mệnh Apollo 11.</p><span class="explorer-badge">✦ Con người đã đặt chân lên Mặt Trăng</span></div></div>
-      <div class="mission-grid">
-        <article class="mission-card"><span class="mission-icon">⌁</span><span class="fact-tag">MARS · SAO HỎA</span><h3>Viking 1</h3><p>Năm 1976, tàu đổ bộ Viking 1 của NASA hạ cánh thành công lên Sao Hỏa và gửi ảnh từ bề mặt.</p><span class="mission-type">ROBOTIC LANDER · 1976</span></article>
-        <article class="mission-card"><span class="mission-icon">◌</span><span class="fact-tag">VENUS · SAO KIM</span><h3>Venera 7</h3><p>Năm 1970, tàu Venera 7 của Liên Xô trở thành tàu thăm dò đầu tiên truyền dữ liệu từ bề mặt một hành tinh khác.</p><span class="mission-type">ROBOTIC LANDER · 1970</span></article>
-        <article class="mission-card"><span class="mission-icon">↗</span><span class="fact-tag">JUPITER · SAO MỘC</span><h3>Galileo Probe</h3><p>Năm 1995, đầu dò Galileo đi vào khí quyển Sao Mộc. Hành tinh này không có bề mặt rắn để tàu đáp xuống như Trái Đất.</p><span class="mission-type">ATMOSPHERIC PROBE · 1995</span></article>
-        <article class="mission-card"><span class="mission-icon">✧</span><span class="fact-tag">SATURN · SAO THỔ</span><h3>Huygens</h3><p>Năm 2005, tàu Huygens hạ cánh xuống Titan — mặt trăng của Sao Thổ, chứ không phải bản thân hành tinh này.</p><span class="mission-type">MOON LANDER · 2005</span></article>
+    <section class="favorites-section" id="favorites"><div class="section-wrap">
+      <div class="section-heading reveal"><p class="eyebrow">02 / CURRENT FAVORITES</p><h2>Mấy thứ làm tớ <span class="blue-text">vui.</span></h2><p>Chưa phải hồ sơ đầy đủ về tớ, chỉ là một vài nét trong chiếc thế giới bé xíu này.</p></div>
+      <div class="favorite-grid">
+        <article class="favorite-item reveal"><div class="favorite-visual blue-visual"><span class="big-symbol">◒</span><span class="visual-label">COLOR_01</span><div class="swatches"><i></i><i></i><i></i><i></i></div></div><div class="favorite-text"><span class="tiny-number">A / 01</span><h3>Xanh dương & trắng</h3><p>Gọn gàng, sáng sủa và nhìn lâu vẫn thấy dễ chịu.</p></div></article>
+        <article class="favorite-item reveal"><div class="favorite-visual cat-visual"><svg viewBox="0 0 200 150" aria-hidden="true"><path d="M45 66 L52 22 L83 48 Q101 40 119 48 L150 22 L157 68 Q169 111 132 128 Q100 145 68 128 Q31 111 45 66Z" fill="#f9fcff" stroke="#246ac2" stroke-width="4" stroke-linejoin="round"/><path d="M58 39 L58 64 L77 50 M143 39 L143 64 L125 50" fill="#9dd5ff"/><ellipse cx="78" cy="83" rx="5" ry="8" fill="#1c4e8b"/><ellipse cx="124" cy="83" rx="5" ry="8" fill="#1c4e8b"/><path d="M94 95 Q101 102 108 95 Q101 110 94 95" fill="#6ba9e9"/><path d="M92 105 L74 103 M92 111 L76 115 M110 105 L128 103 M110 111 L126 115" stroke="#246ac2" stroke-width="2" stroke-linecap="round"/></svg><span class="paw paw-one">🐾</span><span class="paw paw-two">✦</span></div><div class="favorite-text"><span class="tiny-number">B / 02</span><h3>Những chiếc mèo</h3><p>Nhìn có vẻ độc lập, nhưng lúc nào cũng có cách khiến người ta chú ý.</p></div></article>
+        <article class="favorite-item reveal"><div class="favorite-visual note-visual"><div class="note-window"><div class="window-dots"><i></i><i></i><i></i></div><span class="note-line line-long"></span><span class="note-line line-short"></span><span class="note-line line-mid"></span><span class="note-sticker">✦</span></div><span class="note-float">little things<br>matter.</span></div><div class="favorite-text"><span class="tiny-number">C / 03</span><h3>Những điều nho nhỏ</h3><p>Một góc riêng để gom những ý tưởng và thứ mình thấy hay ho.</p></div></article>
       </div>
-      <p class="explorer-footnote">Chưa có con người hay tàu đổ bộ nào chạm xuống bề mặt của Sao Thủy, Sao Mộc, Sao Thổ, Sao Thiên Vương hoặc Sao Hải Vương. Các tàu thăm dò đã bay ngang hoặc khảo sát khí quyển của một số hành tinh này.</p>
     </div></section>
 
-    <section class="cosmos-section" id="cosmos"><div class="section-wrap cosmos-layout">
-      <div class="nebula-art" aria-hidden="true"><div class="nebula nebula-one"></div><div class="nebula nebula-two"></div><div class="nebula-core"></div><span class="nebula-star">✦</span><span class="nebula-caption">10⁹ galaxies<br><small>and counting...</small></span></div>
-      <div class="cosmos-copy"><div class="eyebrow">04 / VƯỢT XA NHỮNG GÌ TA THẤY</div><h2>Chúng ta chỉ là<br>một chấm sáng nhỏ.</h2><p>Vũ trụ bao gồm toàn bộ không gian, thời gian, vật chất và năng lượng. Từ những thiên hà khổng lồ đến các hạt nhỏ bé, mọi thứ đều là một phần của câu chuyện kỳ diệu này.</p><p>Càng quan sát bầu trời, chúng ta càng hiểu rằng vẫn còn rất nhiều điều đang chờ được khám phá.</p><a class="text-link" href="#facts">Khám phá những điều kỳ thú <span>→</span></a></div>
-    </div></section>
-
-    <section class="section-wrap facts-section" id="facts">
-      <div class="section-heading"><div><div class="eyebrow">05 / COSMIC CURIOSITIES</div><h2>Những điều nghe như <span class="gradient-text">khoa học viễn tưởng.</span></h2></div><p>Nhưng chúng đều có thật — theo những gì khoa học hiện biết.</p></div>
-      <div class="fact-grid">
-        <article class="fact-card fact-purple"><span class="fact-symbol">◉</span><span class="fact-tag">01 — ÁNH SÁNG</span><h3>Nhìn xa là nhìn về quá khứ</h3><p>Ánh sáng cần thời gian để di chuyển. Vì vậy, khi nhìn những thiên hà rất xa, ta đang thấy chúng như trong quá khứ.</p></article>
-        <article class="fact-card fact-blue"><span class="fact-symbol">✺</span><span class="fact-tag">02 — CÁC NGÔI SAO</span><h3>Mặt Trời cũng là một ngôi sao</h3><p>Mặt Trời trông lớn hơn những ngôi sao khác vì nó ở gần Trái Đất hơn rất nhiều.</p></article>
-        <article class="fact-card fact-pink"><span class="fact-symbol">∞</span><span class="fact-tag">03 — KHÔNG GIAN</span><h3>Vũ trụ vẫn đang giãn nở</h3><p>Các quan sát cho thấy không gian đang giãn nở, và những thiên hà xa xôi nhìn chung ngày càng cách xa nhau.</p></article>
-      </div>
+    <section class="section-wrap little-world-section" id="little-world">
+      <div class="world-panel reveal"><div class="world-copy"><p class="eyebrow">03 / LITTLE WORLD</p><h2>Đây là góc nhỏ<br>của <span class="blue-text">Minh Ngân.</span></h2><p>Không phải một trang web quá nghiêm túc. Chỉ là một nơi mang màu sắc của tớ — xanh dương, trắng, và vài chú mèo xuất hiện không báo trước.</p><a class="button button-primary" href="#home">Quay về đầu trang <span aria-hidden="true">↑</span></a></div><div class="world-doodle" aria-hidden="true"><div class="doodle-circle"></div><div class="doodle-cat">ฅ^•ﻌ•^ฅ</div><span class="doodle-star star-a">✳</span><span class="doodle-star star-b">✦</span><span class="doodle-star star-c">✧</span><span class="doodle-paw">🐾</span><div class="doodle-label">END OF PAGE<br>THANKS FOR VISITING</div></div></div>
+      <p class="closing-line reveal">được rồi, bạn đã xem hết rồi đó <span>૮ ˶ᵔ ᵕ ᵔ˶ ა</span></p>
     </section>
-    <section class="closing section-wrap"><div class="closing-orbit">✦</div><div class="eyebrow">KEEP LOOKING UP</div><h2>Bầu trời không phải<br><span class="gradient-text">giới hạn.</span></h2><p>Hãy luôn tò mò. Câu hỏi tiếp theo của bạn có thể mở ra cả một thế giới mới.</p><a class="button button-primary" href="#home">Quay về vũ trụ ↑</a></section>
   </main>
-  <footer><a class="brand" href="#home"><span class="brand-mark">✳</span> UNIVERSA<span class="brand-dot">.</span></a><span>Một góc nhỏ dành cho những người yêu bầu trời.</span><span class="footer-right">MADE OF STARDUST <span>✦</span></span></footer>
 
-  <dialog id="planetDialog" class="planet-dialog"><button class="dialog-close" id="dialogClose" aria-label="Đóng">×</button><div class="dialog-planet" id="dialogPlanet"></div><div class="eyebrow" id="dialogEnglish"></div><h2 id="dialogTitle"></h2><p id="dialogDescription"></p><div class="dialog-stat" id="dialogStat"></div></dialog>
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-icon">m.</span><span>ngân<span class="brand-dot">/</span>nghịch</span></a><span>Made with a little bit of blue & a lot of cats.</span><a href="#home" class="back-top">LÊN ĐẦU ↑</a></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
